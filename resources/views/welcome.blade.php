@@ -862,6 +862,15 @@
                 <img src="./images/barbageCode.png" class="w-auto dark:invert size-44">
             </div>
 
+            <div class="py-20">
+                <a href="https://github.com/Jorki3/gastos-project" target="_blank"
+                    class="flex py-4 space-x-4 cursor-pointer">
+                    <img src="./images/github-mark.png" class="w-auto dark:invert size-20">
+                    <p class="my-auto text-lg text-zinc-800 dark:text-white">Repositorio:
+                        https://github.com/Jorki3/gastos-project</p>
+                </a>
+            </div>
+
             <div class="flex justify-center px-0 mt-16 sm:items-center sm:justify-between">
                 <div class="text-sm text-center text-gray-500 dark:text-gray-400 sm:text-left">
                     <div class="flex items-center gap-4">
