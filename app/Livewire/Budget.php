@@ -24,14 +24,15 @@ class Budget extends Component
     public function read()
     {
         $this->labels  = array_values(Category::asArray());
+        $user = Auth::user()->id;
 
-        $ahorro = Expense::where('category', 1)->sum('cost');
-        $comida = Expense::where('category', 2)->sum('cost');
-        $casa = Expense::where('category', 3)->sum('cost');
-        $gastos = Expense::where('category', 4)->sum('cost');
-        $ocio = Expense::where('category', 5)->sum('cost');
-        $salud = Expense::where('category', 6)->sum('cost');
-        $suscripciones = Expense::where('category', 7)->sum('cost');
+        $ahorro = Expense::where('category', 1)->where('user_id', $user)->sum('cost');
+        $comida = Expense::where('category', 2)->where('user_id', $user)->sum('cost');
+        $casa = Expense::where('category', 3)->where('user_id', $user)->sum('cost');
+        $gastos = Expense::where('category', 4)->where('user_id', $user)->sum('cost');
+        $ocio = Expense::where('category', 5)->where('user_id', $user)->sum('cost');
+        $salud = Expense::where('category', 6)->where('user_id', $user)->sum('cost');
+        $suscripciones = Expense::where('category', 7)->where('user_id', $user)->sum('cost');
 
         $this->data = array_values([
             $ahorro,
